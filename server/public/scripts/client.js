@@ -27,6 +27,7 @@ myApp.controller('MessageController', function($http){
             })
             .then(function(response){
                 console.log('added message');
+                getMessages();
             })
             .catch(function(error){
                 console.log('error adding message:', error);
@@ -35,6 +36,20 @@ myApp.controller('MessageController', function($http){
     }; //end addMessage
     
     //GET
-    self.getMessage
+    function getMessages(){
+        console.log('in getMessage');
 
+        $http({
+            method: 'GET',
+            url: '/message'
+        })
+        .then(function(response){
+            self.messages = response.data;
+        })
+        .catch(function(error){
+            console.log('error getting messages', error);
+        });
+
+    }//end getMessage
+    getMessages();
 }); //end MessageController

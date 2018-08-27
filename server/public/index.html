@@ -32,6 +32,13 @@
             <button>Submit</button>
         </form>
     </div>
+    <div class="messagesContainer">
+        <div ng-repeat="message in vm.messages">
+            <p>{{messages.message}}</p>
+            <p>{{message.name}}</p>
+        </div>
+
+    </div>
 
 </body>
 </html>

@@ -71,6 +71,21 @@ router.post('/', (req, res) => {
     }//end addMessage
 });
 
+//GET
 
+router.get('/', (req, res) => {
+
+    const getMessagesQuery = `SELECT * FROM "messages" 
+                                JOIN "users" ON "users"."id" = "messages"."user_id";`;
+
+    pool.query(getMessagesQuery)
+        .then((results) => {
+            res.send(results.rows);
+        })
+        .catch((error) => {
+            console.log('error getting messages:', error);
+            res.sendStatus(500);
+        });
+});// end get route
 
 module.exports = router;
