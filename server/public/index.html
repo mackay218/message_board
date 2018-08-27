@@ -23,10 +23,12 @@
 <body ng-app="myApp">
     <h1>Message Board</h1>
 
-    <div class="formContainer" ng-controller="MessageController">
+    <div class="formContainer" ng-controller="MessageController as vm">
         <form ng-submit="vm.addMessage(vm.message)">
-            <input ng-model="vm.message.user" type="text"/>
-            <input ng-model="vm.message.message" type="text">
+            <label for="#user">User</label>
+            <input ng-model="vm.message.user" type="text" placeholder="Dan" />
+            <label for="#message">Message</label>
+            <input id="message" ng-model="vm.message.message" type="text" placeholder="hello"/>
             <button>Submit</button>
         </form>
     </div>

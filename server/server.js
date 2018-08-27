@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //routes
-app.use('/', messageRouter);
+app.use('/message', messageRouter);
 
 //static files
 app.use(express.static('server/public'));
