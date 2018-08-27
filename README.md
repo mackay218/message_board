@@ -32,3 +32,17 @@ CREATE TABLE "messages" (
 INSERT INTO "messages" ("name", "message")
 VALUES ('Dane', 'The busses were really slow today!');
 ```
+
+
+I did the tables differently 
+
+CREATE TABLE "messages" (
+	"id" SERIAL PRIMARY KEY not null,
+	"message" VARCHAR(500) not null,
+	"user_id" INT
+);
+
+CREATE TABLE "users" (
+	"id" SERIAL PRIMARY KEY not null,
+	"name" VARCHAR(255) not null
+);
