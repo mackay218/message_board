@@ -74,12 +74,13 @@ router.post('/', (req, res) => {
 //GET
 
 router.get('/', (req, res) => {
-
+    console.log('in get message');
     const getMessagesQuery = `SELECT * FROM "messages" 
                                 JOIN "users" ON "users"."id" = "messages"."user_id";`;
 
     pool.query(getMessagesQuery)
         .then((results) => {
+            console.log(results.rows);
             res.send(results.rows);
         })
         .catch((error) => {

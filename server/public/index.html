@@ -31,14 +31,15 @@
             <input id="message" ng-model="vm.message.message" type="text" placeholder="hello"/>
             <button>Submit</button>
         </form>
-    </div>
-    <div class="messagesContainer">
-        <div ng-repeat="message in vm.messages">
-            <p>{{messages.message}}</p>
-            <p>{{message.name}}</p>
+        <div class="messagesContainer">
+            <div ng-repeat="item in vm.messageArr">
+                <p>{{item.message}}</p>
+                <p>{{item.name}}</p>
+            </div>
+        
         </div>
-
     </div>
+    
 
 </body>
 </html>

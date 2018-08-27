@@ -27,6 +27,7 @@ myApp.controller('MessageController', function($http){
             })
             .then(function(response){
                 console.log('added message');
+                self.message = {};
                 getMessages();
             })
             .catch(function(error){
@@ -38,13 +39,14 @@ myApp.controller('MessageController', function($http){
     //GET
     function getMessages(){
         console.log('in getMessage');
-
+        self.messageArr = [];
         $http({
             method: 'GET',
             url: '/message'
         })
         .then(function(response){
-            self.messages = response.data;
+            self.messageArr = response.data;
+            console.log(response.data);
         })
         .catch(function(error){
             console.log('error getting messages', error);
