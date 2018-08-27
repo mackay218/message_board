@@ -32,9 +32,8 @@
             <button>Submit</button>
         </form>
         <div class="messagesContainer">
-            <div ng-repeat="item in vm.messageArr">
-                <p>{{item.message}}</p>
-                <p>{{item.name}}</p>
+            <div  class="message" ng-repeat="item in vm.messageArr">
+                <p>{{item.name}} : {{item.message}}</p>
             </div>
         
         </div>
