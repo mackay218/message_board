@@ -10,3 +10,5 @@ pool.on('connect', () => {
 pool.on('error', (error) => {
     console.log('Error connecting to db', error);
 });
+
+module.exports = router;
