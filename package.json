@@ -1,0 +1,24 @@
+{
+  "name": "message_board",
+  "version": "1.0.0",
+  "description": "# Code Challenge 5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mackay2588/message_board.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mackay2588/message_board/issues"
+  },
+  "homepage": "https://github.com/mackay2588/message_board#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "pg": "^7.4.3"
+  }
+}
