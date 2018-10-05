@@ -1,14 +1,6 @@
-# message_board
-
-# Code Challenge 5
-
-Welcome to Code Challenge 5! In this challenge, you are going to build a full stack application. The whole thing. The application you are going to build is a message board. 
-
-Just relax and show us what you know!
 
 ## Message Board Application
-
-The message board application you are going to build has the following requirements:
+this is a simple message board application to practice the use of AngularJS and PostgreSQL
 
 * Read **ALL** instructions before you start
 * MUST use Angular and PostgreSQL
